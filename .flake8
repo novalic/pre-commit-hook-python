@@ -1,0 +1,20 @@
+[flake8]
+
+ignore =
+    C901,  # function is too complex
+    D203,  # one blank line required before class docstring
+    E266,  # too many leading '#' for block comment
+    H306,  # imports not in alphabetical order
+    Q003,  # Change outer quotes to avoid escaping inner quotes
+    W503,  # line break before binary operator (allow this and not W504)
+
+# ignore specific errors in code by adding: # noqa: code
+
+exclude =
+    .git,
+    __pycache__,
+
+max-complexity = 10
+max_line_length = 120
+color = always
+format = ${cyan}%(path)s${reset}:${yellow_bold}%(row)d${reset}:${green_bold}%(col)d${reset}: ${red_bold}%(code)s${reset} %(text)s
